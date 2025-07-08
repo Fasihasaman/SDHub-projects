@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+<label for="">enter key </label><input type="text" name="" id="key">
+<br>
+<label for="">enter value </label><input type="text" name="" id="value">
+<button id="sabebtn">Save</button>
+
+    
+    <script>
+        // localStorage.setItem('department','IT')
+        // console.log(localStorage.getItem('department'));
+        // document.cookie='name=value'
+        // document.cookie=`dapartment=IT;expires=${new Date(2025,6,5)};path'/'`
+        // sessionStorage.setItem('books','two')
+        // console.log(sessionStorage.getItem('books'));
+        
+
+    let save=document.querySelector('#savebtn')
+    save.addEventListener("click",()=>{
+    let keytext=document.querySelector('#key').value
+    let valuetext=document.querySelector('#value').value
+    if(keytext&&valuetext){
+        localStorage.setItem(keytext,valuetext)
+    }
+})
+    </script>
+</body>
+</html>

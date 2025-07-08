@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <h1>Timer</h1>
+    <div id="timer"></div>
+
+
+    <script>
+       let timercount= document.querySelector('#timer')
+     let count=10
+     
+  let interval=setInterval(()=>{
+        if(count>0){
+        count--;
+        timercount.textContent=`${count}`
+     }
+     else{
+       timercount.textContent='time up'
+     }
+     if(count==0){
+    clearInterval(interval)
+}
+
+     console.log(count);
+     
+     
+    },1000)
+
+
+
+    </script>
+</body>
+</html>
