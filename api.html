@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching data from API</title>
+</head>
+<body>
+    <button id="btn">Fetch</button>
+
+    <script>
+        let allProducts=[]
+        let fetchbtn=document.querySelector('#btn')
+        fetchbtn.addEventListener('click',()=>{
+
+            fetch('https://fakestoreapi.com/products')
+                        .then(res=>res.json())
+                        .then(json=>console.log(json))
+        })
+    </script>
+</body>
+</html>
